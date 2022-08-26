@@ -35,8 +35,6 @@
 |:---:|:---:|
 |이슈 관리|github-Issues|
 |구조 관리|아토믹 디자인 패턴|
-|정적 코드 분석 도구|ESLint|
-|Code Formatter|Prettier|
 |Communication|Github와 & Discord를 Webhook 연동|
 
 
