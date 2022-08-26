@@ -3,6 +3,9 @@ import axios from 'axios';
 import process from "process";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import { CtDisabledBtn, CtEnabledBtn, SaveDisabledBtn } from '../elements/Button';
+import { SmallCategory } from './../elements/Button';
+
 /* 
 npm i --save-dev @types/styled-components 
 npm i styled-reset
@@ -16,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
 ${reset}
 
 body{
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-family: Pretendard;
   @font-face {
     font-family: "Pretendard";
     src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -77,6 +80,12 @@ const App = () => {
       <div>
         백엔드에서 가져온 데이터입니다 : 
       </div>
+      <br></br>
+      <CtEnabledBtn>#전체</CtEnabledBtn>
+      <CtDisabledBtn>#고양이</CtDisabledBtn>
+      <SmallCategory>#강아지</SmallCategory>
+      <SaveDisabledBtn/>
+      <br></br>
     </>
   );
 }
