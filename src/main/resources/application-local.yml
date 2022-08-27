@@ -1,0 +1,5 @@
+spring:
+  profiles: local
+
+  static-path-pattern: '/static/**'
+

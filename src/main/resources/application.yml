@@ -1,0 +1,51 @@
+spring.profiles.active: local, dev
+
+spring:
+  datasource:
+    username: root
+    url:
+    password: ''
+    data: classpath:schema.sql
+    initialization-mode: always
+
+  mvc:
+
+    path match:
+      matching-strategy: ant_path_matcher
+
+    hidden-method:
+      filter:
+        enabled: 'true'
+
+
+  throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+
+  jpa:
+
+    show-sql: 'true'
+
+  messages:
+    basename: messages,config.i18n.messages
+    encoding: UTF-8
+
+  spring-doc:
+    default-consumes-media-type: application/json
+    default-produces-media-type: application/json
+    swagger-ui:
+      path: swagger-ui/index.html
+      disable-swagger-default-url: true
+      display-query-params-without-oauth2: true
+
+  servlet:
+    multipart:
+      max-file-size: 100KB
+      max-request-size: 100KB
+      location: C:/Temp
+
+settings:
+  extension: jpeg,jpg,png,gif
+  MIME-type: image/jpeg, image/png, image/gif
+
