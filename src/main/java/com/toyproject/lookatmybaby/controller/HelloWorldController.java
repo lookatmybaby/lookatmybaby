@@ -1,4 +1,4 @@
-package com.toyproject.lookatmybaby;
+package com.toyproject.lookatmybaby.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
