@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import process from "process";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import { CtDisabledBtn, CtEnabledBtn, SaveDisabledBtn } from '../elements/Button';
-import { SmallCategory } from './../elements/Button';
+import {
+  CtDisabledBtn,
+  CtEnabledBtn,
+  SaveDisabledBtn,
+} from "../elements/Button";
+import { SmallCategory } from "./../elements/Button";
+import Header from "../components/header/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 /* 
 npm i --save-dev @types/styled-components 
 npm i styled-reset
 
 npm install react-router react-router-dom
-npm info "eslint-config-airbnb@latest" peerDependencies
-npm install --save-dev --save-exact prettier
 */
 
 const GlobalStyles = createGlobalStyle` 
@@ -65,7 +68,6 @@ overflow:hidden;
 }
 `;
 
-
 const App = () => {
   // const [hello, setHello] = useState('');
 
@@ -77,17 +79,23 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
-      <div>
-        백엔드에서 가져온 데이터입니다 : 
-      </div>
       <br></br>
       <CtEnabledBtn>#전체</CtEnabledBtn>
       <CtDisabledBtn>#고양이</CtDisabledBtn>
       <SmallCategory>#강아지</SmallCategory>
-      <SaveDisabledBtn/>
+      <SaveDisabledBtn />
       <br></br>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Header />} />
+          <Route path="/post" element={<div>여기는 게시글 작성</div>} />
+          <Route path="/mypage/{id}" element={<div>여기는 마이페이지 </div>} />
+          <Route path="/call" element={<div>여기는 문의 </div>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;
