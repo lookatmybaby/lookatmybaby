@@ -10,6 +10,7 @@ import {
 import { SmallCategory } from "./../elements/Button";
 import Header from "../components/header/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { InputCss } from "./../components/input/inputStyle";
 
 /* 
 npm i --save-dev @types/styled-components 
@@ -84,6 +85,13 @@ const App = () => {
       <CtDisabledBtn>#고양이</CtDisabledBtn>
       <SmallCategory>#강아지</SmallCategory>
       <SaveDisabledBtn />
+      <div>
+        <SaveDisabledBtn />
+      </div>
+      <InputCss placeholder="인스타그램 링크를 입력해주세요." />
+      <div>
+        <SaveDisabledBtn />
+      </div>
       <br></br>
 
       <BrowserRouter>
